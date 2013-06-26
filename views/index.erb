@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ContaAzul Non-Official Gem &middot; Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Le styles -->
+    <link href="/css/bootstrap.css" rel="stylesheet">
+    <style type="text/css">
+      body {
+        padding-top: 20px;
+        padding-bottom: 40px;
+      }
+
+      /* Custom container */
+      .container-narrow {
+        margin: 0 auto;
+        max-width: 700px;
+      }
+      .container-narrow > hr {
+        margin: 30px 0;
+      }
+
+      /* Main marketing message and sign up button */
+      .jumbotron {
+        margin: 60px 0;
+        text-align: center;
+      }
+      .jumbotron h1 {
+        font-size: 72px;
+        line-height: 1;
+      }
+      .jumbotron .btn {
+        font-size: 21px;
+        padding: 14px 24px;
+      }
+
+      /* Supporting marketing content */
+      .marketing {
+        margin: 60px 0;
+      }
+      .marketing p + h4 {
+        margin-top: 28px;
+      }
+    </style>
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+  </head>
+
+  <body>
+
+    <div class="container-narrow">
+
+      <div class="masthead">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+        </ul>
+        <h3 class="muted">ContaAzul Non-Official Gem</h3>
+      </div>
+
+      <hr>
+
+      <div class="jumbotron">
+        <h1>Test it right now!</h1>
+        <p class="lead">Authorize-me below</p>
+
+        <a class="btn btn-large btn-success" href="javascript:window.open('<%= @client %>','popUpWindow', 'toolbar=no,location=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=430, height=500')">Authorize</a>
+      </div>
+
+      <hr>
+
+      <div class="row-fluid marketing">
+        <div class="span6">
+          <h4>Privacy matters!</h4>
+          <p>So we don't save anything that you do here.<br/> (but PRISM do)</p>
+        </div>
+
+        <div class="span6">
+          <h4>Disclaimer</h4>
+          <p>This is an example to a tiny <strong>non-official</strong> wrapper for <a href="http://contaazul.com.br">ContaAzul</a>'s API.</p>
+        </div>
+      </div>
+
+      <hr>
+
+      <div class="footer">
+        <p>made with <span style="color:#f00;">&lt;3</span> in brazil</p>
+      </div>
+
+      <a href="https://github.com/ateliware/contaazul"><img style="position: absolute; top: 0; left: 0; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_darkblue_121621.png" alt="Fork me on GitHub"></a>
+
+    </div>
+
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+  </body>
+</html>
