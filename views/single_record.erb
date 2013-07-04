@@ -24,20 +24,6 @@
         margin: 30px 0;
       }
 
-      /* Main marketing message and sign up button */
-      .jumbotron {
-        margin: 60px 0;
-        text-align: center;
-      }
-      .jumbotron h1 {
-        font-size: 72px;
-        line-height: 1;
-      }
-      .jumbotron .btn {
-        font-size: 21px;
-        padding: 14px 24px;
-      }
-
       /* Supporting marketing content */
       .marketing {
         margin: 60px 0;
@@ -62,20 +48,12 @@
 
       <hr>
 
-      <div class="jumbotron">
-        <% unless @is_logged_in %>
-        <h1>Test it right now!</h1>
-        <p class="lead">Authorize-me below</p>
+      <div class="row">
+        <div class="span12">
+          <h1><%= @record_type %></h1>
 
-        <a class="btn btn-large btn-success" href="javascript:window.open('<%= @client %>','popUpWindow', 'toolbar=no,location=no,status=yes,menubar=no,scrollbars=yes,resizable=yes,width=430, height=500')">Authorize</a>
-        <% else %>
-        <h1>You are in :)<br/>Test me NOW!</h1>
-        <p class="lead">Choose an action below</p>
-
-        <div class="btn-group">
-          <a class="btn" href="/clients">List clients</a>
+          <pre style="width:675px;"><%= @record %></pre>
         </div>
-        <% end %>
       </div>
 
       <hr>
