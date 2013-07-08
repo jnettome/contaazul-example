@@ -42,6 +42,9 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
+          <% if @is_logged_in %>
+          <li><a href="/logout">Logout</a></li>
+          <% end %>
         </ul>
         <h3 class="muted">ContaAzul Non-Official Gem</h3>
       </div>
@@ -49,14 +52,102 @@
       <hr>
 
       <div class="row">
-        <div class="span12">
-          <h1><%= @record_type %>:</h1>
+        <div class="span7">
+          <h1><%= @record_type %></h1>
 
           <ul>
             <% @records.each do |record| %>
             <li><a href="/clients/<%= record["id"] %>"><%= record["name"] %></a></li>
             <% end %>
           </ul>
+        </div>
+      </div>
+
+      <div class="row" style="margin-top: 40px;">
+        <div class="span7">
+
+          <form class="form-horizontal" method="post" action="/clients/create">
+            <fieldset>
+              <legend>Create new</legend>
+
+              <div class="control-group">
+                <label class="control-label">Name</label>
+                <div class="controls">
+                  <input type="text" name="record[name]" placeholder="Cliente A">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Address</label>
+                <div class="controls">
+                  <input type="text" name="record[address]" placeholder="Rua de São Miguel">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Number</label>
+                <div class="controls">
+                  <input type="text" name="record[number]" placeholder="333">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Complement</label>
+                <div class="controls">
+                  <input type="text" name="record[complement]" placeholder="Primeira esquerda">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Neighborhood</label>
+                <div class="controls">
+                  <input type="text" name="record[neighborhood]" placeholder="Vila dos Remédios">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Document Number</label>
+                <div class="controls">
+                  <input type="text" name="record[documentNumber]" placeholder="83.575.050/0001-24">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Postal Code</label>
+                <div class="controls">
+                  <input type="text" name="record[postalCode]" placeholder="53990-000">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Inscrição Estadual</label>
+                <div class="controls">
+                  <input type="text" name="record[inscricaoEstadual]" placeholder="ISENTO">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">Email</label>
+                <div class="controls">
+                  <input type="text" name="record[email]" placeholder="email@email.com">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <label class="control-label">City Id</label>
+                <div class="controls">
+                  <input type="text" name="record[cityId]" placeholder="5252">
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <button type="submit" class="btn btn-success">Salvar</button>
+                </div>
+              </div>
+            </fieldset>
+          </form>
+
         </div>
       </div>
 

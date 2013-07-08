@@ -56,6 +56,9 @@
       <div class="masthead">
         <ul class="nav nav-pills pull-right">
           <li class="active"><a href="/">Home</a></li>
+          <% if @is_logged_in %>
+          <li><a href="/logout">Logout</a></li>
+          <% end %>
         </ul>
         <h3 class="muted">ContaAzul Non-Official Gem</h3>
       </div>

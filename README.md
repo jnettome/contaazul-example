@@ -1,10 +1,6 @@
 # ContaAzul Gem Demo Project
 
-<<<<<<< HEAD
-[Test online!!!](http://contaazul-example.herokuapp.com/)
-=======
 [Test it online r-i-g-h-t now!](http://contaazul-example.herokuapp.com/)
->>>>>>> 391ec6ff0a87390d71df95a8deee5732555ddb37
 
 This is a simple and very small demo of [contaazul](https://github.com/ateliware/contaazul) unofficial gem.
 
