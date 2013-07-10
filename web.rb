@@ -10,7 +10,7 @@ end
 enable :sessions
 
 get '/' do
-  Contaazul.external_token = "0000013f-aa0e-57a8-0000-00000000a50f"
+  Contaazul.external_token = "0000013f-aa0e-57a8-0000-00000655a50f"
   Contaazul.return_url = "http://localhost:4567/return"
 
   options = { :company_token => session[:company_token] } if session[:company_token]
@@ -38,9 +38,11 @@ end
 
 post '/clients/create' do
   @client = Contaazul::Client.new(:company_token => session[:company_token])
-  @record = JSON.parse(@client.create_client(params[:record]))
-  puts @record.inspect
-  @record
+
+  params[:record][:id] = ""
+  response = @client.create_client(params[:record].to_json)
+
+  redirect '/clients'
 end
 
 get '/clients/:id' do

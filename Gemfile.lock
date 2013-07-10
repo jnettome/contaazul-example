@@ -1,6 +1,5 @@
-GIT
-  remote: git://github.com/ateliware/contaazul
-  revision: a788c717a88221285030f802323655b6a74fef75
+PATH
+  remote: ../contaazul
   specs:
     contaazul (0.1.1)
       addressable (~> 2.3.4)
